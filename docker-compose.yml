@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  esasnap:
+    container_name: ESA2Python
+    dns:
+      - 8.8.8.8
+    build:
+      context: .
+    volumes:
+      - ./src:/workdir
+    ports:
+      - "8888:8888"
